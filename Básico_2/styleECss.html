@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styles e CSS com jQuery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="h1Header">Style e CSS com jQuery</h1>
+    </header>
+
+    <article>
+        <h2>Adicionando e removendo classes</h2>
+        <p>
+            $(elemento).addClass(classes); <br>
+            Utilizado para adicionar uma ou mais classes ao elemento selecionados. <br> <br>
+            $(elemento).removeClass(classes); <br>
+            Utilizado para remover uma ou mais classes ao elemento selecionados. <br> <br>
+            $(elemento).toggleClass(classes); <br>
+            Utilizado para adicionar ou remover uma ou mais classes ao elemento selecionados. <br>
+            Fazendo da seguinte maneira: <br>
+            Se a classe existe no elemento, ele remove. <br>
+            Se a classe não existe no elemento, ele adiciona. <br> 
+            Um exemplo de uso para esse método é só pensar num botão tipo switch. 
+            Em que se estiver ligado, desliga e se estiver desligado, liga. <br> <br>
+            <h3>Exemplo:</h3>
+            let cabecalhos = $('h1'); <br>
+            let paragrafos = $('p'); <br>
+            <br>
+            paragrafos.addClass("vermelho"); <br>
+            cabecalhos.removeClass("vermelho azul"); <br>
+            cabecalhos.toggleClass("verde sublinhar negrito"); <br>
+            <br>
+            ..... a classe cabecalhos recebe as tags "h1" e a paragrafos as tags "p". <br>
+            ..... as classes vermelho e azul serão removidas das tags H1. <br>
+            ..... as classes verde, sublinhar e negrito serão removidas ou adicionadas 
+                    das tags H1, dependendo se já estão atribuídas ou não, respectivamente.
+        </p>
+        <button id="btn_AddClass" class="btn_Style_CSS">Adicionar a Classe de Teste aos Parágrafos</button>
+        <button id="btn_RemoveClass" class="btn_Style_CSS">Remover a Classe de Teste dos Parágrafos</button>
+        <button id="btn_ChangeClass" class="btn_Style_CSS">Adicionar ou Exlcui a Classe de Teste dos Parágrafos</button>
+        
+        <hr>
+
+        <h2>Método CSS</h2>
+        
+        <h3>CSS(nomePropriedade)</h3>
+        <p>
+            Ao passar o nome da propriedade, o método retornará o valor armazenado para aquela tag. <br>
+            Ex.: <br>
+            Imagine um quadrado azul delimitado por uma div. <br>
+            $("div").css("background-color"); <br>
+            Ao executar esse método, o resultado será a cor do quadrado. <br>
+            <div class="div_test"></div>
+            <button id="btn_MetodoCSSRetornaValor">Método CSS que retorna valor</button>
+            <p id="metodoCssRetornaValor"></p>
+        </p>
+        
+        <h3>CSS([nomesPropriedades])</h3>
+        <p>
+            Nesse caso, será passado como parâmetro, um vetor. <br>
+            Ao passar um vetor de strings com nomes de propriedades, receberá um objeto com valores correspondentes. <br>
+            Ex.: <br>
+            $("div").css(["width", "height", "background-color"]); <br>
+            <div class="div_test"></div>
+            <button id="btn_MetodoCSSRetornaVetor">Método CSS que retorna vetor</button>
+            <p id="metodoCssRetornaVetor"></p>
+        </p>
+        
+        <h3>CSS(nomePropriedade, valor)</h3>
+        <p>
+            Passando o nome da propriedade e um valor, você pode alterá-la facilmente. <br>
+            Ex.: <br>
+            $("div").css("background-color", "red"); <br>
+            <div class="div_test"></div>
+            <button id="btn_MetodoCSSAlteraValor">Método CSS que altera valor</button>
+        </p>
+
+    </article>
+
+    <footer>
+        Desenvolvido por Anderson Amicuchi
+        <script src="jQuery.js"></script>
+        <script src="styleECss.js"></script>
+        <script src="scripts.js"></script>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Médio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="h1Header">Curso Introdutório de jQuery</h1>
+    </header>
+
+    <article>
+        <h1>Sobre jQuery</h1>
+        <p>
+            Ao usar o jQuery, podemos selecionar o elemento pela TAG, mas além disso, podemos também selecionar o elemento que quisermos de uma lista de elementos como se fosse um vetor (array).
+        </p>
+        <p>Como no seguinte exemplo:</p>
+        <p> let cabecalhos = $("h1"); <br>
+            let paragrafos = $("p");<br>
+            <br>
+            Essas duas variáveis, cabecalhos e paragrafos, estão recebendo todos os elementos h1 e p, respectivamente. <br>
+            Mas, como dito acima, podemos obter os elementos HTML pela posição que passarão a ocupar na variável. <br>
+            <br>
+            let primeiroParagrafo = paragrafos.get(0); <br>
+            let terceiroParagrafo = paragrafos.get(2); <br>
+            <br>
+            let primeiroParagrafoTambem = paragrafos[0]; <br>
+            <br>
+            Consegue perceber a semelhança entre o jQuery e o que fazemos no Javascript com vetores?
+        </p>
+
+        <hr>
+        
+        <h2>Adicionando elementos</h2>
+        <p>Seguem alguns métodos que nos permitem inserir conteúdo em um elemento existente.</p>
+        <ul>
+            <li><button id="btn_Append">Append</button></li>
+            <h1 id="h1_append"></h1>
+            <li><button id="btn_AppendTo">AppendTo</button></li>
+            <h1 id="h1_appendTo"></h1>
+            <li> <button id="btn_Prepend">Prepend</button></li>
+            <h1 id="h1_prepend"></h1>
+            <li><button id="btn_PrependTo">PrependTo</button></li>
+            <h1 id="h1_prependTo"></h1>
+        </ul>
+        
+        <h3>Append</h3>
+        <p>$('h1').append("< p>Olá, Mundo!< /p>"); <br>
+            Nesse caso, o método está "dizendo": <br>
+            "pegue o h1" e insira no final dele, o parágrafo < p>Olá, Mundo!</ p>
+        </p>
+        
+        <h3>AppendTo</h3>
+        <p>
+            $("< p>Olá, Mundo!< /p>").appendTo('h1'); <br>
+            Aqui, ele está dizendo: <br>
+            "pegue o parágrafo "< p>Olá, Mundo!< /p>"" e insira no final de h1.
+        </p>
+
+        <h3>Prepend</h3>
+        <p>
+            $('h1').prepend("< p>Olá, Mundo!< /p>"); <br>
+            Nesse caso, o método está "dizendo": <br>
+            "pegue o h1" e insira no início dele, o parágrafo < p>Olá, Mundo!</ p>
+        </p>
+
+        <h3>PrependTo</h3>
+        <p>
+            $("< p>Olá, Mundo!< /p>").prependTo('h1'); <br>
+            Aqui, ele está dizendo: <br>
+            "pegue o parágrafo "< p>Olá, Mundo!< /p>"" e insira no início de h1.
+        </p>
+        <hr>
+        <p>Perceba que a diferença entre: (Append e AppendTo) e (Prepend e PrependTo) é que os primeiros inserem os elementos no final da tag e os últimos, inserem os novos elementos no início da tag. <br>
+        Geralmente, o resultado pode parecer o mesmo, mas para casos específicos, haverá necessidade de um ou de outro.
+        </p>
+
+        <hr>
+        <hr>
+
+        <br><br>
+        <h2>Ler e editar conteúdo HTML</h2>
+        <p>Podemos utlizar o método .HTML() sem passar nenhum valor, assim ele vai retornar todo o conteúdo dentro do elemento.
+        </p>
+        <p>
+            exemplo: <br>
+            $('div').html(); <br>
+            retornará tudo que tiver dentro da div. <br>
+            nesse exemplo: <br>
+            < p>parágrafo 1< /p> <br>
+            < p>parágrafo 2< /p>
+        </p>
+        <hr>
+        <div id="divExemplo">
+            Esse conteúdo será utilizado de exemplo. E aí, gostou?
+        </div>
+        <button id="btn_html">Método HTML</button>
+        <h3 id="h1_html"></h3>
+        <br><br>
+        <button id="btn_text">Método TEXT</button>
+        <h3 id="h1_Text"></h3>
+
+
+
+
+    </article>
+<br><br><br><br><br><br>
+    <footer>
+        Desenvolvido por Anderson Amicuchi
+        <script src="jQuery.js"></script>
+        <script src="scripts.js"></script>
+    </footer>
+</body>
+</html>

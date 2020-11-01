@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript e JQuery</title>
+    <style>
+        img{
+            width: 200px;
+        }
+        .green{
+            background-color: rgb(223, 250, 223);
+        }
+        .red{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <h1>Javascript e JQuery</h1>
+    <button id="btn_hide">Esconder o título</button> <br> <br>
+    <button id="btn_azul">Azul</button>
+    <button id="btn_vermelho">Vermelho</button>
+    <button id="btn_verde">Verde</button>
+    <span id="mensagem"></span><br> <br>
+    <button id="btn_FadeIn">Fade In</button>
+    <button id="btn_FadeOut">Fade Out</button>
+    <br><br>
+    <hr>
+
+    <h1 id="alterandoClasse">Alterando Classe via JQuery</h1>
+    <button id="btn_classe" class="red">Insira uma nova classe</button>
+    <span id='msg_2'></span>
+    <br><br>
+    <hr>
+
+    <h1>Carrocel</h1>
+    <img id="img1" src="img1.jpg" alt="">
+    <img id="img2" src="img2.jpg" alt="" style="display: none">
+    <img id="img3" src="img3.jpg" alt="" style="display: none">
+    <img id="img4" src="img4.jpg" alt="" style="display: none">
+    <br><br><br>
+    <a href="#" id="l1">1</a>
+    <a href="#" id="l2">2</a>
+    <a href="#" id="l3">3</a>
+    <a href="#" id="l4">4</a>
+
+
+
+    <footer>
+        <!--
+          -- ((IMPORTANTE))
+          -- Por uma questão de boa prática, os scripts devem ser inseridos no footer da página.
+          -- Assim, garante-se que eles só serão carregados depois que toda a página já foi exibida.
+          -- Isso é importante para evitar que alguns comandos que dependem do carregamento
+          -- da página sejam realizados antes do tempo esperado. 
+        ---->
+        <script src="jquery.js"></script>
+        <script src="script.js"></script>
+    </footer>    
+</body>
+</html>

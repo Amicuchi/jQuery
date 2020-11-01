@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Eventos com jQuery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="h1Header">Animações com jQuery</h1>
+    </header>
+
+    <article>
+        <h2>Show - Hide - Toggle</h2>
+        <p>
+            São utilizados para mostrar, ocultar e alternar entre os dois primeiros, respectivamente. <br>
+        </p>
+        <button id="btn_show">Show - Imediato</button>
+        <button id="btn_show2seg">Show - 2 segundos</button> <br>
+        <button id="btn_hide">Hide - Imediato</button>
+        <button id="btn_hide2seg">Hide - 2 segundos</button> <br>
+        <button id="btn_toggle">Toggle - Imediato</button>
+        <button id="btn_toggle2seg">Toggle - 2 segundos</button> <br>
+        <br>
+        <div class="div_exemplo" id="div_ex1"></div>
+
+        <hr>
+
+        <h2>Slide</h2>
+        <p>
+            <ul>
+                <li>SlideDown <br> Slide de cima para baixo, mostrando o conteúdo</li> <br>
+                <li>SlideUp <br> Slide de baixo para cima, ocultando o conteúdo</li> <br>
+                <li>SlideToggle <br> Alterna entre Up e Down </li> <br>
+            </ul>
+            <button id="btn_SlideDown">Slide - Down Imediato</button>
+            <button id="btn_SlideUp">Slide Up - Imediato</button>
+            <button id="btn_SlideToggle">Slide Toggle - Imediato</button> <br>
+            <button id="btn_SlideDown2seg">Slide - Down 2seg</button>
+            <button id="btn_SlideUp2seg">Slide Up - 2seg</button>
+            <button id="btn_SlideToggle2seg">Slide Toggle - 2seg</button>
+        </p>
+        <div class="div_exemplo" id="div_ex2"></div>
+
+        <hr>
+        <h2>Fade</h2>
+        <p>
+            <ul>
+                <li>Fade In <br> Exive o elemento</li> <br>
+                <li>Fade Out <br> Oculta o elemento</li> <br>
+                <li>Fade Toggle <br> Alterna entre In e Out </li> <br>
+                <li>Fade To <br> Permite que se defina o tempo do efeito e o nível de transparência </li>
+            </ul>
+            <button id="btn_FadeIn">Fade In - Imediato</button>
+            <button id="btn_FadeOut">Fade Out - Imediato</button>
+            <button id="btn_FadeToggle">Fade Toggle - Imediato</button>
+            <button id="btn_FadeTo">Fade To</button> <br>
+            <button id="btn_FadeIn2seg">Fade In - 2seg</button>
+            <button id="btn_FadeOut2seg">Fade Down - 2seg</button>
+            <button id="btn_FadeToggle2seg">Fade Toggle - 2seg</button>
+        </p>
+        <div class="div_exemplo" id="div_ex3"></div>
+
+        <hr>
+
+        <h2>Animate</h2>
+        <p>
+            Utilizado para criar animações customizadas. <br>
+            Ex.: <br>
+            - $("div").animate({height:"250px"}); => Define a altura em 250px. <br>
+            <button id="btn_animateHeight">Animate - Height</button>
+            <div class="div_exemplo" id="div_ex4"></div>
+            <br>
+            - $("div_ex4").animate({height:"250px", width:"250px", margin:"25px"}, 2000); <br>
+            => Altera Altura (Height), Largura (Width) e Margem (Margin) durante 2 segundos. <br>
+            <button id="btn_animateHeightVarios">Animate - Várias Propriedades</button>
+            <div class="div_exemplo" id="div_ex5"></div>
+            <br>
+            Utilizando o método ANIMATE não é possível alterar cores. <br>
+            Para isso, será necessário utilizar o Plugin adicional "jquery.color" <br>
+            <br>
+            É possível alinhar diversos métodos para criar animações mais complexas. <br>
+            Uma só iniciará após o término da anterior. <br>
+            <button id="btn_animateHeightSequencias">Animate - Sequências</button>
+            <div class="div_exemplo" id="div_ex6"></div>
+            <br>
+
+
+        </p>
+
+
+
+    </article>
+
+    <footer>
+        Desenvolvido por Anderson Amicuchi
+        <script src="jQuery.js"></script>
+        <script src="animacoes.js"></script>
+    </footer>
+</body>
+</html>
